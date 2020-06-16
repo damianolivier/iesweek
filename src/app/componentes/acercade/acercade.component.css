@@ -1,0 +1,73 @@
+.assistCounter {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: "barlow-bold";
+    background: linear-gradient(to right, #593b88 0%, #2e3782 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.assistCounterIcon {
+    margin-left:10px;
+    font-size: 40px;
+    line-height: 70px;
+    font-weight: bold;
+    background: linear-gradient(to right, #593b88 0%, #2e3782 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    vertical-align: middle;
+}
+
+.acercade {
+    color:#24254d;
+    background-image: url("../../../assets/background_acercade.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    min-height: 780px;
+    font-size: 1.15rem;
+    overflow: visible;
+}
+
+button {
+    margin-top:50px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 20px;
+    background: linear-gradient(to right, #593b88 0%, #2e3782 100%);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    color: white;
+    text-transform: uppercase;
+    border:none;
+}
+
+button:focus { 
+    outline: 0;
+}
+
+button span {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #ba122b;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    margin-right: 50px;
+}
+
+button:disabled span {
+    margin-right: 0;
+    margin-left: 50px;
+    background-color: gray;
+    cursor: auto;
+}
+
+.contadorAsistentes {
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .acercade p, .contadorAsistentes {
+        border-radius: 15px;
+        background: rgba(255,255,255,0.9);
+        padding: 10px;
+    }
+}

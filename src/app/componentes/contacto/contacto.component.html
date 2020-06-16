@@ -1,0 +1,117 @@
+<div class="row container sm-container-fluid mt-5 mb-5 ml-auto mr-auto contacto-div">
+    <div class="contacto-width col-md-12  col-xl-6 col-lg-6">
+        <div class="card text-white bg-danger mb-3 rounded">
+            <div class="row no-gutters">
+                <div class="col-md-5">
+                    <img src="../../../assets/upcn-ubicacion.PNG" class="card-img rounded" alt="...">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Sindicato UPCN Santa Fe</h5>
+                        <p class="card-text">Rivadavia 2527, 3000<br>Santa Fe<br><a href="http://www.upcnsfe.com.ar" target="_blank">www.upcnsfe.com.ar</a><br><a href="tel:0800-888-6248">0800-888-6248</a><br>Lun a Vie de 07:30 a 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card text-white bg-danger mb-3 rounded">
+            <div class="row no-gutters">
+                <div class="col-md-5">
+                    <img src="../../../assets/ies-ubicacion.PNG" class="card-img rounded" alt="...">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Terciario y Universidad:</h5>
+                        <p class="card-text">Tucumán 2721 (3000) Santa Fe</p>
+                        <h5 class="card-title">Secundario:</h5>
+                        <p class="card-text">Tucumán 2718 (3000) Santa Fe<br><a href="tel:03424525658">0342 - 4525658</a><br>Lun a Vie de 9 a 12 y de 17 a 21</p>
+                        <p class="card-text"><a href="mailto:informes@iessantafe.edu.ar">informes@iessantafe.edu.ar</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 align-content-center mt-5 mb-2 animated fadeIn">
+            <ul class="social-network social-circle">
+                <li><a target="_blank" href="https://www.instagram.com/iesweek/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/IES-Week-102951207750737/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/iesweek" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <!-- <li><a target="_blank" href="https://www.youtube.com/channel/UCs35_YL-H0ICFobTxUL7cZQ" class="icoYoutube" title="Youtube"><i class="fa fa-youtube"></i></a></li> -->
+                <!-- <li><a target="_blank" href="https://vimeo.com/user26372890" class="icoVimeo" title="Vimeo"><i class="fa fa-vimeo"></i></a></li> -->
+                <!-- <li><a target="_blank" href="https://www.linkedin.com/company/ies-santa-fe" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="contacto-width col-md-12  col-xl-6 col-lg-6">
+        <form class="ml-md-0 mt-md-5 ml-sm-0 mt-sm-5" #formContacto="ngForm" (ngSubmit)="onSubmit();formContacto.reset()">
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group input-group">
+                        <input [ngClass]="{'input-missing' : nombrecompleto.touched && !nombrecompleto.valid}" type="text" class="form-control rounded" name="nombrecompleto" #nombrecompleto="ngModel" [(ngModel)]="contactonuevo.nombrecompleto" required placeholder="Nombre y Apellido">
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                    <i class="fa fa-user"></i>                                        
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group input-group">
+                        <input [ngClass]="{'input-missing' : email.touched && !email.valid}" type="email" class="form-control rounded" name="email" #email="ngModel" [(ngModel)]="contactonuevo.email" required pattern="[a-z]+[a-z0-9._]+@[a-z]+\.[a-z]+" placeholder="Email">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                        <i class="fa fa-at"></i>                                         
+                                </span>
+                        </div>
+                    </div>
+                    <div class="form-group input-group">
+                        <input type="number" class="form-control rounded" name="telefono" #telefono="ngModel" [(ngModel)]="contactonuevo.telefono" placeholder="Celular">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                    <i class="fa fa-phone"></i>                                       
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group input-group">
+                        <select class="form-control rounded" name="carrera" #carrera="ngModel" [(ngModel)]="contactonuevo.carrera" placeholder="Carrera de interés">
+                            <option selected value="">Seleccione su carrera de interés</option>
+                            <option value="Administración de Empresas">Administración de Empresas</option>
+                            <option value="Desarrollo de Software">Desarrollo de Software</option>
+                            <option value="Diseño Digital">Diseño Digital</option>
+                            <option value="Diseño Gráfico y Visual">Diseño Gráfico y Visual</option>
+                            <option value="Diseño y Producción de Indumentaria">Diseño y Producción de Indumentaria</option>
+                            <option value="Periodismo Integral y Deportivo">Periodismo Integral y Deportivo</option>
+                            <option value="Relaciones Públicas">Relaciones Públicas</option>
+                        </select>
+                    </div>
+                    <div class="form-group input-group">
+                        <textarea [ngClass]="{'input-missing' : mensaje.touched && !mensaje.valid}" class="form-control rounded" name="mensaje" #mensaje="ngModel" [(ngModel)]="contactonuevo.mensaje" placeholder="Deja tu mensaje" rows="3"></textarea>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                        <i class="fa fa-pencil"></i>                                   
+                                </span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger w-25 m-auto rounded" [disabled]="!formContacto.form.valid">Enviar</button>
+                    </div>
+                    <br>
+
+                    <div *ngIf="envie">
+                        <div *ngIf="bandera" class="alert alert-success alert-dismissible fade show" role="alert">
+                            Su mensaje se envió correctamente!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div *ngIf="!bandera" class="alert alert-danger alert-dismissible fade show" role="alert">
+                            Su mensaje no pudo ser enviado. Reintente mas tarde!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="hashtag">#IESWEEK2019</h1>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

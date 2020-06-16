@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: barlow;
+    src: url("assets/fonts/barlow/Barlow-Regular.otf") format("opentype");}
+
+    @font-face {
+    font-family: barlow-bold;
+    src: url("assets/fonts/barlow/Barlow-Bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: barlow-bolditalic;
+    src: url("assets/fonts/barlow/Barlow-BoldItalic.otf") format("opentype");
+  }

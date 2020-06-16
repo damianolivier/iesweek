@@ -1,0 +1,18 @@
+<div class="row container m-auto mb-5 acercade">
+
+    <div class="col-md-12  col-xl-5 col-lg-5 ml-3 mt-5 mt-md-5">
+        <p>Noviembre de 2019 es el mes elegido por el IES para estrenar un nuevo evento con temáticas variadas. A partir de este año, IES WEEK será un evento anual que organiza el Instituto de Estudios Superiores de Santa Fe “IES”, que nuclea todas las actividades expositivas, educativas y recreativas que generan las carreras terciarias del IES.</p>
+        <p><b>A desarrollarse del 4 al 8 de Noviembre de 2019, este año las sedes serán la Sala de UPCN (Rivadavia esq. Tucumán) y el mismo IES (Tucumán 2721, 2do. Piso).</b></p>
+        <div class="col contadorAsistentes mt-5">
+            <span class="assistCounter">{{(item|async)?.value }} <i class="assistCounterIcon fa fa-users"></i></span> 
+            <br/>
+            <button [disabled]="userAssisted" class="mt-3 mb-3" (click)="update()"><span>Asistiré</span></button>
+        </div>
+
+    </div>
+    
+    <div class="col-md-12  col-xl-7 col-lg-7">
+
+    </div>
+
+</div>

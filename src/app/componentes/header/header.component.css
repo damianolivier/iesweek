@@ -1,0 +1,68 @@
+.navbar {
+    background-image: linear-gradient(white, rgba(255,255,255,0.65), rgba(255,255,255,0));
+}
+
+.header-logo {
+    width: 200px;
+}
+
+.rounded-more {
+    border-radius: 15px;
+}
+
+.top-menu, .navbar-toggler {
+    font-size:20px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    background-color: #ba122b;
+}
+
+.top-menu li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.top-menu li a {
+    color: white;
+}
+.top-menu li.active a {
+    color: #ba122b;
+}
+.top-menu li:hover {
+    background-color: #ca223b;
+}
+
+.top-menu li.active {
+    background-color:white;
+}
+
+.top-menu-left {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.top-menu-right {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+button:focus { 
+    outline: 0;
+}
+
+@media (max-width: 992px) {
+    .top-menu-left {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+    .top-menu-right {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+    }
+
+    .top-menu {
+        box-shadow: none;
+        border: 1px solid #ba122b;
+    }
+}
